@@ -1,9 +1,4 @@
-from pydantic import BaseModel
-
-
-class Notification(BaseModel):
-    message: str
-    description: str
-
-    def __init__(self):
-        super().__init__()
+class Notification():
+    def __init__(self, message: str, description: str):
+        self.message = message
+        self.description = description

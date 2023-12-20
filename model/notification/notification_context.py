@@ -1,14 +1,9 @@
-from pydantic import BaseModel
-from typing import List
-
 from model.notification.notification import Notification
 
 
-class NotificationContext(BaseModel):
-    _notifications: List[Notification]
-
+class NotificationContext():
     def __init__(self):
-        super().__init__()
+        self._notifications = []
 
     def add_notification(self, notification: Notification):
         self._notifications.append(notification)
