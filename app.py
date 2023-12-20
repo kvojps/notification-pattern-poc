@@ -26,7 +26,7 @@ async def create_user(user_request: UserRequest):
 
     if user_dto.get_notification_context().has_errors():
         raise HTTPException(
-            status_code=400, detail="teste")
+            status_code=400, detail=user_dto.get_notification_context().get_errors())
 
     user = User(
         name=user_dto.name,
