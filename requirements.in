@@ -1,0 +1,5 @@
+pydantic
+typing
+fastapi
+uvicorn
+beanie
