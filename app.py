@@ -29,9 +29,10 @@ async def create_user(user_request: UserRequest):
             status_code=400, detail=user_dto.get_notification_context().get_errors())
 
     user = User(
-        name=user_dto.name,
-        email=user_dto.email,
-        password=user_dto.password
+        name=user_dto.get_name(),
+        email=user_dto.get_email(),
+        cpf=user_dto.get_cpf(),
+        age=user_dto.get_age()
     )
 
     return await user.save()

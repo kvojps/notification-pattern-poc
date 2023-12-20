@@ -17,6 +17,18 @@ class UserDTO():
     def get_notification_context(self):
         return self._notification_context
 
+    def get_name(self):
+        return self._name
+
+    def get_email(self):
+        return self._email
+
+    def get_cpf(self):
+        return self._cpf
+
+    def get_age(self):
+        return self._age
+
     def _validate(self):
         self._validate_name()
         self._validate_email()
